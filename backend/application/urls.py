@@ -109,6 +109,7 @@ urlpatterns = (
             path("api/init/dictionary/", InitDictionaryViewSet.as_view()),
             path("api/init/settings/", InitSettingsViewSet.as_view()),
             path("apiLogin/", ApiLogin.as_view()),
+            path("api/ucloud/", include("dvadmin.ucloud.urls")),
 
             # 仅用于开发，上线需关闭
             path("api/token/", LoginTokenView.as_view()),
